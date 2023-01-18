@@ -6,34 +6,15 @@
   position: relative;
 
   .code {
-    position: absolute;
-    top: 100px;
-    left: 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 0.85rem;
-    max-width: var(--max-width);
-    width: 100%;
-    z-index: 2;
-    font-family: var(--font-mono);
-
-    a {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
+    margin-bottom: 15px;
     p {
-      position: relative;
-      margin: 0;
+      font-size: 13px;
       padding: 1rem;
-      background-color: rgba(var(--callout-rgb), 0.5);
+      background-color: rgba(var(--callout-rgb), 1);
       border: 1px solid rgba(var(--callout-border-rgb), 0.3);
       border-radius: var(--border-radius);
+      color: var(--text-primary) !important;
     }
-
     code {
       font-weight: 700;
       font-family: var(--font-mono);
@@ -41,9 +22,9 @@
   }
 
   .leftSide {
+    margin-left: 5px;
     span {
       position: relative;
-      margin-left: -1px;
       &::after {
         position: absolute;
         top: 0%;
