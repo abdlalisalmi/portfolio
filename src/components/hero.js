@@ -25,7 +25,7 @@ export function Hero() {
           <p className="p-2 text-xs bg-zinc-900 rounded-xl text-zinc-50 borde-2 border-zinc-100 hover:bg-zinc-800 transition duration-300 mb-4 font-mono">
             abdlalisalmi
             <span className="text-[10px]">
-              <span className="text-xs text-zinc-400 px-1">/</span> README
+              <span className="text-xs text-zinc-400 px-1">/</span>README
               <span className="text-xs text-zinc-400">.md</span>
             </span>
           </p>
@@ -37,28 +37,42 @@ export function Hero() {
               words={"Hi, I'm Abdelaali ES SALMI."}
               duration={1}
             />
-            {/* Hi, I'm Abdelaali ES SALMI. */}
           </h1>
-          <p className="text-md text-center text-zinc-400/90">
-            I'm a full-stack web developer and software engineer with a passion
-            for building impactful digital solutions
-            <br />
-            Thanks for stopping by! Feel free to explore my work—I hope you find
-            it inspiring.
-          </p>
-          <div className="flex flex-row gap-2 items-center justify-center mt-6">
-            {socialLinks.map((link, index) => (
-              <a
-                key={index}
-                href={link.href}
-                target="_blank"
-                rel="noreferrer"
-                className="flex items-center justify-center h-10 w-10 bg-zinc-900 text-zinc-50 rounded-full hover:bg-zinc-800 transition duration-300"
-              >
-                {link.icon}
-              </a>
-            ))}
-          </div>
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: 20,
+            }}
+            animate={{
+              opacity: 1,
+              y: [20, -5, 0],
+            }}
+            transition={{
+              duration: 0.5,
+              ease: [0.4, 0.0, 0.2, 1],
+            }}
+          >
+            <p className="text-md text-center text-zinc-400/90">
+              I'm a full-stack web developer and software engineer with a
+              passion for building impactful digital solutions
+              <br />
+              Thanks for stopping by! Feel free to explore my work—I hope you
+              find it inspiring.
+            </p>
+            <div className="flex flex-row gap-2 items-center justify-center mt-6">
+              {socialLinks.map((link, index) => (
+                <a
+                  key={index}
+                  href={link.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex items-center justify-center h-10 w-10 bg-zinc-900 text-zinc-50 rounded-full hover:bg-zinc-800 transition duration-300"
+                >
+                  {link.icon}
+                </a>
+              ))}
+            </div>
+          </motion.div>
           <motion.div
             className="flex items-center justify-center mt-12"
             animate={{
@@ -70,9 +84,9 @@ export function Hero() {
               ease: "easeInOut", // Smooth in and out transitions
             }}
           >
-            <span>
+            <a href="#open-source">
               <ArrowDown2 size={30} color="#fff" />
-            </span>
+            </a>
           </motion.div>
         </section>
       </BackgroundLines>

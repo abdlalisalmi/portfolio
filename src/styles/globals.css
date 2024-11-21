@@ -11,6 +11,10 @@
 	--font-roboto: 'Roboto', sans-serif;
 }
 
+* {
+	scroll-behavior: smooth;
+}
+
 @media (prefers-color-scheme: dark) {
 	:root {
 		--background: #0a0a0a;
@@ -19,6 +23,7 @@
 }
 
 body {
+	scroll-behavior: smooth;
 	color: var(--foreground);
 	background: var(--background);
 	font-family: var(--font-roboto);
