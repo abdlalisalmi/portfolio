@@ -111,7 +111,7 @@ const links = [
   },
   {
     name: "Freelancing",
-    href: "#projects",
+    href: "#freelancing",
     icon: <DollarCircle size={18} color="white" />,
   },
   {

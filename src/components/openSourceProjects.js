@@ -4,8 +4,12 @@ import { openSourceProjects as items } from "@/database/openSourceProjects";
 
 export default function OpenSourceProjects() {
   return (
-    <div className="w-full">
-      <SectionHeader id="open-source" title="Open Source Projects" />
+    <section className="w-full">
+      <SectionHeader
+        id="open-source"
+        title="Open Source Projects"
+        description="Contributions to the open-source community, showcasing innovative solutions and collaborative development efforts."
+      />
       <BentoGrid className="">
         {items.map((item, i) => (
           <BentoGridItem
@@ -19,6 +23,6 @@ export default function OpenSourceProjects() {
           />
         ))}
       </BentoGrid>
-    </div>
+    </section>
   );
 }

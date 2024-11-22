@@ -3,12 +3,13 @@
 import React from "react";
 import { InfiniteMovingCards } from "./ui/infiniteMovingCards";
 import SectionHeader from "./ui/sectionHeader";
+import { clients } from "@/database/clients";
 
 export function Clients() {
   return (
     <div>
       <SectionHeader
-        title="Clients I've Worked With"
+        title="Clients I've worked with"
         id={"clients"}
         className="mt-12"
       />
@@ -19,7 +20,7 @@ export function Clients() {
               href={client.link}
               target="_blank"
               rel="noreferrer"
-              className="w-[200px] relative flex-shrink-0 p-4 rounded-2xl transition-all duration-400 ease-in-out hover:bg-gray-200"
+              className="w-[200px] relative flex-shrink-0 p-4 rounded-2xl transition-all duration-400 ease-in-out hover:bg-gray-500/25"
               key={client.name}
             >
               <img
@@ -34,31 +35,3 @@ export function Clients() {
     </div>
   );
 }
-
-const clients = [
-  {
-    name: "OCP",
-    logo: "/images/clients/ocp.svg",
-    link: "https://www.ocpgroup.ma/",
-  },
-  {
-    name: "UM6P",
-    logo: "/images/clients/um6p.png",
-    link: "https://www.um6p.ma/",
-  },
-  {
-    name: "1337",
-    logo: "/images/clients/1337.svg",
-    link: "https://www.1337.ma/",
-  },
-  {
-    name: "AAIT",
-    logo: "/images/clients/aait.png",
-    link: "https://aait.um6p.ma/",
-  },
-  {
-    name: "Lycee Mohammed VI d'Excellence",
-    logo: "/images/clients/lm6e.png",
-    link: "https://lm6e.ma/",
-  },
-];
